@@ -17,14 +17,14 @@ import java.util.concurrent.ThreadPoolExecutor;
  * @author RainSoul
  * @create 2024-08-29
  */
-public class DynamicThreadPoolServiceImpl implements IDynamicThreadPoolService {
+public class DynamicThreadPoolService implements IDynamicThreadPoolService {
 
-    private final Logger logger = LoggerFactory.getLogger(DynamicThreadPoolServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(DynamicThreadPoolService.class);
 
     private final String applicationName;
     private final Map<String, ThreadPoolExecutor> threadPoolExecutorMap;
 
-    public DynamicThreadPoolServiceImpl(String applicationName, Map<String, ThreadPoolExecutor> threadPoolExecutorMap) {
+    public DynamicThreadPoolService(String applicationName, Map<String, ThreadPoolExecutor> threadPoolExecutorMap) {
         this.applicationName = applicationName;
         this.threadPoolExecutorMap = threadPoolExecutorMap;
     }
